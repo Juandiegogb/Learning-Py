@@ -5,6 +5,7 @@ def contenido():
 
     ventana = tkinter.Tk()
     ventana.geometry("400x300")
+    
 
     Usuario = tkinter.Label(ventana, text="Usuario")
     Usuario.pack()
@@ -24,9 +25,8 @@ def contenido():
         user = "Juan"
         clave = "1234"
 
-        print(cajaClave.get())
-
         if cajaUsuario.get() == user and cajaClave.get() == clave:
+            ventana.withdraw()
             print("Hola")
 
     boton = tkinter.Button(ventana, text="Login", command = lambda:login(cajaUsuario,cajaClave))
