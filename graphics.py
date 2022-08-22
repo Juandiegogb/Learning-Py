@@ -1,4 +1,3 @@
-from curses import color_content
 import tkinter
 
 

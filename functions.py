@@ -1,7 +1,6 @@
 from string import punctuation
 from random import sample
 from calendar import monthrange
-
 from graphics import contenido
 
 
