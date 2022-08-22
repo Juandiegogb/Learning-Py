@@ -1,4 +1,4 @@
-from functions import Main
+from graphics import contenido
 
 
-Main()
+contenido()

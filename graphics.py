@@ -1,22 +1,35 @@
 import tkinter
 
 
-def contenido(x):
+def contenido():
 
     ventana = tkinter.Tk()
     ventana.geometry("400x300")
 
-    etiqueta = tkinter.Label(ventana, text=x)
-    etiqueta.pack()
+    Usuario = tkinter.Label(ventana, text="Usuario")
+    Usuario.pack()
 
-    cajaTexto = tkinter.Entry(ventana)
-    cajaTexto.pack()
+    cajaUsuario = tkinter.Entry(ventana)
+    cajaUsuario.pack()
 
-    def imprimir():
-        etiqueta2 = tkinter.Label(ventana, text=cajaTexto.get())
-        etiqueta2.pack()
-        
-    boton = tkinter.Button(ventana, text="Imprimir", command=imprimir)
+    Clave = tkinter.Label(ventana, text="Clave")
+    Clave.pack()
+
+    cajaClave = tkinter.Entry(ventana)
+    cajaClave.pack()
+
+    
+
+    def login( cajaUsuario, cajaClave):
+        user = "Juan"
+        clave = "1234"
+
+        print(cajaClave.get())
+
+        if cajaUsuario.get() == user and cajaClave.get() == clave:
+            print("Hola")
+
+    boton = tkinter.Button(ventana, text="Login", command = lambda:login(cajaUsuario,cajaClave))
     boton.pack()
 
     ventana.mainloop()
